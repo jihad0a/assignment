@@ -29,13 +29,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.amber,
         title: const Text('My Profile'),
-          actions: const [
-            Icon(Icons.add),
-            SizedBox(width: 8,),
-            Icon(Icons.settings),
-            SizedBox(width: 8,),
-            Icon(Icons.call),
-            SizedBox(width: 8,),
+          actions: [
+            IconButton(onPressed: () {}, icon: const Icon(Icons.add,),),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.settings,),),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.call,),),
           ],
       ),
 
