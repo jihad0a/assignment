@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Assignment(ii)',
+      title: 'Exam Week 2',
       debugShowCheckedModeBanner: false,
       home: Home(),
     );
@@ -27,54 +27,43 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: const Text('My Profile'),
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.add,),),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.settings,),),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.call,),),
-          ],
+        backgroundColor: Colors.red,
+        title: const Text('Need Blood'),
+        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 16),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
+          ),
+        ],
       ),
-
       body: const Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(height: 8,),
             CircleAvatar(
               radius: 80,
-              child: Icon(Icons.icecream_outlined, size: 90,),
+              backgroundColor: Colors.black54,
+              child: Icon(Icons.bloodtype_outlined, size: 90, color: Colors.red,),
             ),
-            SizedBox(height: 8,),
+            SizedBox(height: 10,),
             Text(
-              'Ice cream is very delicious right?',
-              style: TextStyle(fontSize: 16),
-            ),
-            SizedBox(height: 40,),
-            CircleAvatar(
-              radius: 80,
-              child: Icon(Icons.code, size: 90,),
-            ),
-            SizedBox(height: 8,),
-            Text(
-              'Programing is not boring if you love it',
-              style: TextStyle(fontSize: 17),
-            ),
-            SizedBox(height: 40,),
-            CircleAvatar(
-              radius: 80,
-              child: Icon(Icons.egg_outlined, size: 90,),
-            ),
-            SizedBox(height: 8,),
-            Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Text(
-                'If you submit code directly copy from chatgpt then mark will 0',
-                style: TextStyle(fontSize: 16),
-              ),
-            ),
+              'Donate Blood',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            )
           ],
         ),
       ),
     );
   }
 }
+
+
+
